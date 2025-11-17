@@ -1,12 +1,18 @@
 /* by German Ayala */
-/* Font - Chakra Petch */
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,700;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
 /* Color Palette
 #0A192F
 #00C6BD
 #FFF7D6
+
+v2
+Eggshell #f4f1de
+Burnt Peach #e07a5f
+Twilight Indigo #3d405b
+Muted Teal #81b29a
+Apricot Cream #f2cc8f
 */
 
 * {
@@ -14,198 +20,206 @@
     padding: 0px;
     box-sizing: border-box;
   }
+
   
-  body {
-    font-family: 'Kosugi Maru', sans-serif;
-    background-color: #0A192F;
-    color: #00C6BD;
-  }
+body {
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #3d405b;
+  color: #fff;
+  font-size: 20px;
+}
 
-  p {
-    padding: 10px;
-  }
-  
-  li {
-    list-style: none;
-  }
-  
-  a {
-    color: #00C6BD;
-    text-decoration: none;
-  }
+p {
+  padding: 10px;
+}
 
-  a:hover {
-    color: #FFF7D6;
-  }
+li {
+  list-style: none;
+}
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Chakra Petch', sans-serif;
-    padding: 10px;
-  }
-  
-  #page-wrapper {
-    width: 100%;
-    margin: 0 auto;
-  }
+a {
+  color: #fff;
+  text-decoration: none;
+}
 
-  header {
-      width: 100%;
-      min-height: 50px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding: 10px;
-      position: sticky;
-      top: 0;
-      box-shadow: 0px -2px 8px 3px #000000;
-      background-color: #0A192F;
-  }
+a:hover {
+  color: #e07a5f;
+}
 
-  #hero {
-    width: 60vw;
-    font-family: 'Chakra Petch', sans-serif;
-    font-size: 40px;
-    font-weight: 700;
-  }
-  
-  #navbar {
-    text-align: center;
-    width: 40vw;
-  }
+h1, h2, h3, h4, h5, h6 {
+  padding: 10px;
+}
 
-  #navbar ol {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-end;
-      width: 100%;
-      justify-content: space-around;
-  }
+#page-wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
 
-  #welcome-section {
-    max-width: 1000px;
-    margin: 100px auto;
+header {
+    width: 60%;
+    min-height: 50px;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    top: 0;
+    margin: auto;
+}
+
+#hero {
+  width: 40vw;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+#hero img {
+  width: 75px;
+}
+
+#navbar {
+  text-align: center;
+  width: 60vw;
+}
+
+#navbar ol {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100%;
     justify-content: space-around;
+}
+
+#welcome-section {
+  max-width: 60%;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
+#welcome {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+#about-img img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid #81b29a;
+}
+
+#projects {
+  max-width: 60%;
+  margin: auto;
+  text-align: center;
+}
+
+#projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+  gap: 20px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+#projects-grid img {
+  height: calc(100% - 4rem);
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.project-tile {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #e07a5f;
+  border-radius: 10px;
+}
+
+.project-tile p {
+  font-size: 1em;
+  padding: 1.5rem .5rem;
+}
+
+#all-projects {
+  background: #e07a5f;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: background 0.3s ease-out;
+}
+
+#all-projects:hover {
+  background-color: #81b29a ;
+}
+
+#contact-me {
+  max-width: 1000px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+#profiles {
+  display: flex;
+  justify-content: space-around;
+  max-width: 50%;
+  margin: auto;
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 15px;
+}
+
+/* MOBILE */
+@media (max-width: 650px) {
+  #welcome-section {
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+    max-width: 100%;
+  }
+  #about-img img {
+    margin: 20px auto;
+  }
+  #navbar ol{
+    flex-direction: column;
     align-items: center;
   }
-  #name {
-    font-size: 50px;
-    padding: 0;
+  #navbar ol li{
+    padding: 5px;
   }
-
-  #welcome {
-    font-size: 15px;
-  }
-
-  #about-img img {
-    max-width: 300px;
-    height: auto;
-    border-radius: 50%;
-    border: 5px #FFF7D6 solid;
-  }
-
-  #projects {
-    max-width: 1500px;
-    margin: auto;
-    text-align: center;
-  }
-
-  #projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    max-width: 1500px;
-    width: 100%;
-    gap: 20px;
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  #projects-grid img {
-    height: calc(100% - 4rem);
-    width: 100%;
-    object-fit: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-  
-  .project-tile {
-    width: 100%;
-    height: 100%;
-    border: 2px #FFF7D6 solid;
-    border-radius: 10px;
-  }
-
-  .project-tile p {
-    font-size: 1rem;
-    padding: 1.5rem .5rem;
-  }
-
-  #all-projects {
-    background: #FFF7D6;
-    padding: 15px 40px;
-    display: inline-block;
-    border-radius: 5px;
-    font-weight: 700;
-    transition: background 0.3s ease-out;
-  }
-
-  #all-projects:hover {
-    background-color: #00C6BD;
-  }
-
-  #contact-me {
-    max-width: 1000px;
-    margin: 20px auto;
-    text-align: center;
+  header {
+    position: relative;
   }
 
   #profiles {
-    display: flex;
-    justify-content: space-around;
-    max-width: 50%;
-    margin: auto;
-    padding: 20px;
+    flex-direction: column;     
+  }
+  #profiles a {
+    margin-bottom: 10px;
   }
 
-  footer {
-    text-align: center;
-    margin: 20px auto;
-    font-size: 15px;
+}
+
+@media (max-width: 700px) {
+  #projects {
+    display: inline-block;
+    max-width: 100%;
+    margin: 20px;
   }
-  /* MOBILE */
- 
-  @media (max-width: 650px) {
-    #welcome-section {
-      display: inline-block;
-      text-align: center;
-      margin: 20px;
-    }
-
-    #navbar ol{
-      flex-direction: column;
-      align-items: center;
-    }
-    #navbar ol li{
-      padding: 5px;
-    }
-    header {
-      position: relative;
-    }
-
-    #profiles {
-      flex-direction: column;     
-    }
-    #profiles a {
-      margin-bottom: 10px;
-    }
-
+  #projects-grid {
+    display: inline-block;
   }
-
-  @media (max-width: 700px) {
-    #projects-grid {
-      padding: 20px 100px;
-      gap: 40px;
-    }
+  .project-tile {
+    border: none;
   }
+}
