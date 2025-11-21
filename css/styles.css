@@ -83,7 +83,7 @@ header {
   width: 60vw;
 }
 
-#navbar ol {
+#navbar ul {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -109,6 +109,11 @@ header {
   height: auto;
   border-radius: 50%;
   border: 5px solid #81b29a;
+}
+
+#about-img img:hover {
+  border: none;
+  padding: 2px;
 }
 
 #projects {
@@ -179,6 +184,21 @@ footer {
   font-size: 15px;
 }
 
+/* CSS for a blinking cursor on name paragraph*/
+#welcome::after {
+  content: " |"; /* The cursor character */
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 /* MOBILE */
 @media (max-width: 650px) {
   #welcome-section {
@@ -190,11 +210,11 @@ footer {
   #about-img img {
     margin: 20px auto;
   }
-  #navbar ol{
+  #navbar ul{
     flex-direction: column;
     align-items: center;
   }
-  #navbar ol li{
+  #navbar ul li{
     padding: 5px;
   }
   header {
