@@ -1,37 +1,38 @@
 /* by German Ayala */
 @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
-
-/* Color Palette
-#0A192F
-#00C6BD
-#FFF7D6
-
-v2
-Eggshell #f4f1de
-Burnt Peach #e07a5f
-Twilight Indigo #3d405b
-Muted Teal #81b29a
-Apricot Cream #f2cc8f
-*/
+:root {
+  --main-color: #010c18;
+  --text-color: #f7f7f7;
+  --sub-color: #06763f;
+  --hl-color: #e07a5f;
+}
 
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-  }
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 
+html {
+  font-family: "Poiret One", sans-serif;
+  color: var(--text-color);
+}
   
 body {
-  font-family: "Poiret One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #3d405b;
-  color: #fff;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--main-color);
   font-size: 20px;
 }
 
-p {
+.container {
+  display: grid;
+  min-height: 100vh; 
+  grid-template-rows: auto 1fr auto;
+}
+
+h1, h2, h3, h4, h5, h6, p {
   padding: 10px;
 }
 
@@ -44,19 +45,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: #e07a5f;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  padding: 10px;
-}
-
-#page-wrapper {
-  width: 100%;
-  margin: 0 auto;
-}
-
 header {
     width: 60%;
     min-height: 50px;
@@ -64,12 +52,11 @@ header {
     flex-direction: row;
     align-items: center;
     padding: 10px;
-    top: 0;
     margin: auto;
 }
 
 #hero {
-  width: 40vw;
+  width: 40%;
   font-size: 40px;
   font-weight: 700;
 }
@@ -80,7 +67,7 @@ header {
 
 #navbar {
   text-align: center;
-  width: 60vw;
+  width: 60%;
 }
 
 #navbar ul {
@@ -108,7 +95,7 @@ header {
   max-width: 300px;
   height: auto;
   border-radius: 50%;
-  border: 5px solid #81b29a;
+  border: 5px solid var(--sub-color);
 }
 
 #about-img img:hover {
@@ -152,7 +139,7 @@ header {
 }
 
 #all-projects {
-  background: #e07a5f;
+  background: var(--sub-color);
   padding: 15px 40px;
   display: inline-block;
   border-radius: 5px;
@@ -161,7 +148,7 @@ header {
 }
 
 #all-projects:hover {
-  background-color: #81b29a ;
+  background-color: var(--hl-color) ;
 }
 
 #contact-me {
