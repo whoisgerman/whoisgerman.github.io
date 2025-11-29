@@ -17,6 +17,7 @@
 html {
   font-family: "Poiret One", sans-serif;
   color: var(--text-color);
+  scrollbar-gutter: stable;
 }
   
 body {
@@ -55,22 +56,25 @@ header {
     margin: auto;
 }
 
-#hero {
-  width: 40%;
-  font-size: 40px;
-  font-weight: 700;
+main {
+  width: 60%;
+  margin: auto;
 }
 
-#hero img {
+.hero {
+  width: 40%;
+}
+
+.hero img {
   width: 75px;
 }
 
-#navbar {
+.navbar {
   text-align: center;
   width: 60%;
 }
 
-#navbar ul {
+.navbar ul {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -78,38 +82,76 @@ header {
     justify-content: space-around;
 }
 
-#welcome-section {
-  max-width: 60%;
+.nav-link {
+  position: relative;
+  color: var(--text-color);
+  text-decoration: none;
+}
+/* Nav link underline effect */
+.nav-link::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--hl-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover::before {
+  transform: scaleX(1);
+}
+
+textarea {
+  height: 250px;
+  width: 100%;
+  resize: none;
+}
+
+.form {
+  padding: 10px;
+  margin: 100px auto;
+  width: 80%;
+}
+.form form {
+  padding: 10px;
+}
+
+input[type="text"] {
+  width: 300px; 
+}
+
+.welcome-section {
   margin: 100px auto;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
   align-items: center;
 }
-#welcome {
+.welcome {
   font-size: 50px;
   font-weight: bold;
 }
 
-#about-img img {
+.pfp img {
   max-width: 300px;
-  height: auto;
   border-radius: 50%;
   border: 5px solid var(--sub-color);
+  transition: border 0.3s ease-in-out;
 }
 
-#about-img img:hover {
-  border: none;
-  padding: 2px;
+.pfp img:hover {
+  border: 5px solid var(--hl-color);
 }
 
-#projects {
-  max-width: 60%;
-  margin: auto;
+.projects {
   text-align: center;
 }
 
-#projects-grid {
+.projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
   gap: 20px;
@@ -118,9 +160,10 @@ header {
   margin: 20px auto;
 }
 
-#projects-grid img {
-  height: calc(100% - 4rem);
-  width: 100%;
+.projects-grid img {
+  width: 80%;
+  padding: 10px;
+  margin: auto;
   object-fit: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -131,6 +174,7 @@ header {
   height: 100%;
   border: 2px solid #e07a5f;
   border-radius: 10px;
+  background-color: var(--sub-color);
 }
 
 .project-tile p {
@@ -138,7 +182,7 @@ header {
   padding: 1.5rem .5rem;
 }
 
-#all-projects {
+.all-projects {
   background: var(--sub-color);
   padding: 15px 40px;
   display: inline-block;
@@ -147,33 +191,38 @@ header {
   transition: background 0.3s ease-out;
 }
 
-#all-projects:hover {
+.all-projects:hover {
   background-color: var(--hl-color) ;
 }
 
-#contact-me {
-  max-width: 1000px;
-  margin: 20px auto;
-  text-align: center;
-}
-
-#profiles {
-  display: flex;
-  justify-content: space-around;
-  max-width: 50%;
-  margin: auto;
-  padding: 20px;
-}
-
+/* Footer styling */
 footer {
+  width: 60%;
   text-align: center;
   margin: 20px auto;
-  font-size: 15px;
+}
+
+.contact-me {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.profiles {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.copy {
+  font-size: 16px;
+}
+
+.profile-link:hover {
+  color: var(--hl-color);
 }
 
 /* CSS for a blinking cursor on name paragraph*/
-#welcome::after {
-  content: " |"; /* The cursor character */
+.welcome::after {
+  content: " |"; 
   animation: blink-caret 0.75s step-end infinite;
 }
 
@@ -188,42 +237,42 @@ footer {
 
 /* MOBILE */
 @media (max-width: 650px) {
-  #welcome-section {
+  .welcome-section {
     display: inline-block;
     text-align: center;
     margin: 20px;
     max-width: 100%;
   }
-  #about-img img {
+  .about-img img {
     margin: 20px auto;
   }
-  #navbar ul{
+  .navbar ul{
     flex-direction: column;
     align-items: center;
   }
-  #navbar ul li{
+  .navbar ul li{
     padding: 5px;
   }
   header {
     position: relative;
   }
 
-  #profiles {
+  .profiles {
     flex-direction: column;     
   }
-  #profiles a {
+  .profiles a {
     margin-bottom: 10px;
   }
 
 }
 
 @media (max-width: 700px) {
-  #projects {
+  .projects {
     display: inline-block;
     max-width: 100%;
     margin: 20px;
   }
-  #projects-grid {
+  .projects-grid {
     display: inline-block;
   }
   .project-tile {
