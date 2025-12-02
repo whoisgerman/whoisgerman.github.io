@@ -14,3 +14,5 @@ function typeWriter() {
 
 // Start the typing animation when the page loads
 window.onload = typeWriter;
+
+//Light / Dark modes

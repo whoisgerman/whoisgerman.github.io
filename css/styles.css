@@ -4,8 +4,57 @@
 :root {
   --main-color: #010c18;
   --text-color: #f7f7f7;
-  --sub-color: #06763f;
+  --sub-color: #067a5f;
   --hl-color: #e07a5f;
+}
+
+.lightmode {
+  --main-color: #f9f8f6;
+  --text-color: #000000;
+  --sub-color: #067a5f;
+  --hl-color: #e07a5f;
+}
+
+button{
+  border: none;
+  padding: .8em 2em;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+  font: inherit;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#theme-toggle{
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--hl-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+#theme-toggle svg{
+  fill: var(--primary-color);
+}
+
+#theme-toggle svg:last-child{
+  display: none;
+}
+
+.lightmode #theme-toggle svg:first-child{
+  display: none;
+}
+
+.lightmode #theme-toggle svg:last-child{
+  display: block;
 }
 
 * {
@@ -42,7 +91,7 @@ li {
 }
 
 a {
-  color: #fff;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -67,6 +116,8 @@ main {
 
 .hero img {
   width: 75px;
+  background-color: var(--sub-color);
+  border-radius: 50%;
 }
 
 .navbar {
@@ -138,6 +189,7 @@ input[type="text"] {
 
 .pfp img {
   max-width: 300px;
+  margin: auto;
   border-radius: 50%;
   border: 5px solid var(--sub-color);
   transition: border 0.3s ease-in-out;
@@ -149,37 +201,6 @@ input[type="text"] {
 
 .projects {
   text-align: center;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
-  gap: 20px;
-  padding: 20px;
-  text-align: center;
-  margin: 20px auto;
-}
-
-.projects-grid img {
-  width: 80%;
-  padding: 10px;
-  margin: auto;
-  object-fit: cover;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.project-tile {
-  width: 100%;
-  height: 100%;
-  border: 2px solid #e07a5f;
-  border-radius: 10px;
-  background-color: var(--sub-color);
-}
-
-.project-tile p {
-  font-size: 1em;
-  padding: 1.5rem .5rem;
 }
 
 .all-projects {
@@ -200,6 +221,7 @@ footer {
   width: 60%;
   text-align: center;
   margin: 20px auto;
+  color: var(--text-color);
 }
 
 .contact-me {
@@ -219,6 +241,55 @@ footer {
 .profile-link:hover {
   color: var(--hl-color);
 }
+/* Project tiles */
+.project-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 2rem;
+}
+
+.project-card {
+  background: var(--sub-color);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px var(--sub-color);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: var(--text-color);
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 5px 10px var(--hl-color);
+}
+
+.project-img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 1.25rem 1.5rem;
+}
+
+.project-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+}
+
+.project-tech {
+  padding: 10px;
+}
+
+.project-description {
+  color: var(--text-color);
+  line-height: 1.5;
+}
 
 /* CSS for a blinking cursor on name paragraph*/
 .welcome::after {
@@ -236,7 +307,7 @@ footer {
 }
 
 /* MOBILE */
-@media (max-width: 650px) {
+@media (max-width: 850px) {
   .welcome-section {
     display: inline-block;
     text-align: center;
@@ -260,22 +331,19 @@ footer {
   .profiles {
     flex-direction: column;     
   }
+
   .profiles a {
     margin-bottom: 10px;
   }
 
+  main {
+    width: 100%;
+  }
 }
 
-@media (max-width: 700px) {
-  .projects {
-    display: inline-block;
-    max-width: 100%;
-    margin: 20px;
+@media (max-width: 1570px) {
+  main, .welcome-section, header {
+    width: 80%;
   }
-  .projects-grid {
-    display: inline-block;
-  }
-  .project-tile {
-    border: none;
-  }
+
 }

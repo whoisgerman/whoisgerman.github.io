@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,11 @@
     <body>
         <div class="container">
             <header>
-                <div class="hero"><a href="index.html"><img src="images/logo.png" alt="Logo"></a></div>
+                <div class="hero">
+                    <a href="index.html">
+                    <img src="images/logo.png" alt="Logo">
+                    </a>
+                </div>
                 <nav class="navbar">
                     <ul>
                         <li><a class="nav-link" href="#about">About Me</a></li>
@@ -22,6 +26,10 @@
                         <li><a class="nav-link" href="contact.html">Contact</a></li>
                         <li><a class="nav-link" href="https://www.linkedin.com/in/german-ayala/" target="_blank">Resume</a></li>
                     </ul>
+                    <button id="theme-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+                    </button>
                 </nav>
             </header>
             <main>
@@ -37,33 +45,83 @@
                     </div>                
                 </section>
 
-                <section class="projects" id="projects">
-                    <h2>Projects</h2>
-                    <div class="projects-grid">
-                        <a class="project-tile" href="https://d24p6b5h4t2ou8.cloudfront.net/montecristo-web/index.html" target="_blank">
-                            <img src="images/montecristo.png" width="110px">
-                            <p class="pro-title">Montecristo Restaurant</p>
-                            <p class="pro-desc">
-                                <i class="fa-brands fa-js"></i>
-                            </p>
-                        </a>
-                        <a class="project-tile" href="https://codepen.io/german-ayala/pen/XWVEgyJ" target="_blank">
-                            <img src="images/product-page.png">
-                            <p>Product Landing Page</p>
-                        </a>
-                        <a class="project-tile" href="https://codepen.io/german-ayala/pen/YzeWNRX" target="_blank">
-                            <img src="images/technical-doc.png">
-                            <p>Technical Documentation Page</p>
-                        </a>
-                        <a class="project-tile" href="https://codepen.io/german-ayala/pen/jOYZzQo" target="_blank">
-                            <img src="images/form-page.png">
-                            <p>Form Page</Form></p>
-                        </a>
+                <!-- Project tiles -->
+                <h2 class="projects" id="projects">Projects</h2>
+                <div class="project-grid">
+                    <a class="project-link" href="https://d24p6b5h4t2ou8.cloudfront.net/montecristo-web/index.html" target="_blank">
+                    <div class="project-card">
+                        <img src="images/montecristo.png" alt="Project Screenshot" class="project-img">
+
+                        <div class="project-content">
+                        <h3 class="project-title">Montecristo Restaurant</h3>
+
+                        <div class="project-tech">
+                            <i class="fa-brands fa-js fa-lg"></i>
+                            <i class="fa-brands fa-css fa-lg"></i>
+                            <i class="fa-brands fa-html5 fa-lg"></i>
+                        </div>
+
+                        <p class="project-description">
+                            A simple website for a local restaurant. Using jquery library for slick slider.
+                        </p>
+                        </div>
                     </div>
-                    <div>
-                        <a class="all-projects" href="https://codepen.io/german-ayala" target="_blank">All projects</a>
+                    </a>
+                    <a class="project-link" href="https://codepen.io/german-ayala/pen/XWVEgyJ" target="_blank">
+                    <div class="project-card">
+                        <img src="images/product-page.png" alt="Project Screenshot" class="project-img">
+
+                        <div class="project-content">
+                        <h3 class="project-title">Product Landing Page</h3>
+
+                        <div class="project-tech">
+                            <i class="fa-brands fa-css fa-lg"></i>
+                            <i class="fa-brands fa-html5 fa-lg"></i>
+                        </div>
+
+                        <p class="project-description">
+                            A simple landing page made for an assignment.
+                        </p>
+                        </div>
                     </div>
-                </section>
+                    </a>
+                    <a class="project-link" href="https://codepen.io/german-ayala/pen/jOYZzQo" target="_blank">
+                    <div class="project-card">
+                        <img src="images/form-page.png" alt="Project Screenshot" class="project-img">
+
+                        <div class="project-content">
+                        <h3 class="project-title">Form Page</h3>
+
+                        <div class="project-tech">
+                            <i class="fa-brands fa-css fa-lg"></i>
+                            <i class="fa-brands fa-html5 fa-lg"></i>
+                        </div>
+
+                        <p class="project-description">
+                            A simple form for an assignment.
+                        </p>
+                        </div>
+                    </div>
+                    </a>
+                    <a class="project-link" href="https://codepen.io/german-ayala/pen/YzeWNRX" target="_blank">
+                    <div class="project-card">
+                        <img src="images/technical-doc.png" alt="Project Screenshot" class="project-img">
+
+                        <div class="project-content">
+                        <h3 class="project-title">Technical Documentation</h3>
+
+                        <div class="project-tech">
+                            <i class="fa-brands fa-css fa-lg"></i>
+                            <i class="fa-brands fa-html5 fa-lg"></i>
+                        </div>
+
+                        <p class="project-description">
+                            A simple page designed for documentation made for an assignment.
+                        </p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
 
             </main>
             <footer>
