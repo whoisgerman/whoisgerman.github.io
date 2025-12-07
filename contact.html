@@ -11,7 +11,7 @@
         <script defer src="scripts/script.js"></script>
         <script src="https://kit.fontawesome.com/338a5a5848.js" crossorigin="anonymous"></script>
     </head>
-    <body>
+    <body class="theme-preload fade-in">
         <div class="container">
             <a href="#main-content" class="skip-link">Skip to main content</a>
             <header>
@@ -41,7 +41,7 @@
             <main>
                 <section class="form">
                     <h1>Let's work together!</h1>
-                    <form>
+                    <form id="contactMe">
                         <label for="name">Name</label><br>
                         <input type="text" id="name" name="name"><br>
                         <label>
@@ -52,7 +52,7 @@
                             Message<br>
                             <textarea id="message" name="message" placeholder="Start here.."></textarea>
                         </label>
-
+                        <input id="formBtn" type="submit" value="Send">
                     </form>
                 </section>
             </main>

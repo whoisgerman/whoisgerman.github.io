@@ -1,6 +1,7 @@
 /* by German Ayala */
 @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Scope+One&display=swap');
 :root {
   --main-color: #010c18;
   --text-color: #f7f7f7;
@@ -22,9 +23,30 @@
 }
 
 html {
-  font-family: "Poiret One", sans-serif;
+  font-family: "Scope One", serif;
   color: var(--text-color);
   scrollbar-gutter: stable;
+}
+
+/* Prevent flashes of transitions during theme calculation */
+body.theme-preload * {
+  transition: none !important;
+}
+
+/* Smooth fade-in of the entire page */
+body.fade-in {
+  opacity: 0;
+  animation: fadeInPage .35s ease-out forwards;
+}
+
+@keyframes fadeInPage {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Optional: smooth theme transition after load */
+body {
+  transition: background-color .25s ease, color .25s ease;
 }
   
 body {
@@ -32,6 +54,7 @@ body {
   min-height: 100dvh;
   background-color: var(--main-color);
   font-size: 20px;
+  color: var(--text-color);
 }
 
 .skip-link {
@@ -185,6 +208,11 @@ button{
   position: fixed;
   bottom: 20px;
   right: 20px;
+  transition: transform 0.25s ease;
+}
+#theme-toggle:hover {
+  transform: translateY(-3px);
+  fill: rgb(245, 228, 198);
 }
 
 #theme-toggle svg{
@@ -224,6 +252,13 @@ input[type="text"] {
   width: 300px; 
   padding: 2px;
   margin: 2px 0;
+}
+
+input[type="submit"] {
+  width: 100px;
+  cursor: pointer;
+  padding: 10px 0;
+  font-weight: bold;
 }
 
 .welcome-section {
