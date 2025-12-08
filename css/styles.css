@@ -44,7 +44,7 @@ body.fade-in {
   to   { opacity: 1; }
 }
 
-/* Optional: smooth theme transition after load */
+/* smooth theme transition after load */
 body {
   transition: background-color .25s ease, color .25s ease;
 }
@@ -123,6 +123,10 @@ main {
   border-radius: 50%;
 }
 
+.hero a {
+  display: block;
+  width: 75px;
+}
 .navbar {
   text-align: center;
   width: 60%;
@@ -249,7 +253,6 @@ textarea {
 }
 
 input[type="text"] {
-  width: 300px; 
   padding: 2px;
   margin: 2px 0;
 }
@@ -272,9 +275,11 @@ input[type="submit"] {
   font-size: 50px;
   font-weight: bold;
 }
-
+.pfp {
+  width: 100%;
+}
 .pfp img {
-  max-width: 300px;
+  max-height: 300px;
   margin: auto;
   border-radius: 50%;
   border: 5px solid var(--sub-color);
@@ -433,5 +438,11 @@ footer {
   .navbar a {
     width: 100px;
     padding-left: 2.5em;
+  }
+}
+
+@media (max-width: 400px) {
+  main, header, footer {
+    width: 100%;
   }
 }
