@@ -190,13 +190,6 @@ main {
 /* Light mode button */
 button{
   border: none;
-  padding: .8em 2em;
-  background-color: var(--primary-color);
-  color: white;
-  border-radius: 4px;
-  font: inherit;
-  text-transform: uppercase;
-  font-weight: 500;
   cursor: pointer;
 }
 
@@ -275,6 +268,7 @@ input[type="submit"] {
   font-size: 50px;
   font-weight: bold;
 }
+
 .pfp {
   width: 100%;
 }
@@ -330,9 +324,9 @@ footer {
 
 .project-card {
   background: var(--sub-color);
-  border-radius: 16px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 5px 10px var(--sub-color);
+  box-shadow: 0px 0px 0 var(--sub-color);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   display: flex;
   flex-direction: column;
@@ -343,7 +337,7 @@ footer {
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 5px 10px var(--hl-color);
+  box-shadow: -6px 6px 0 var(--hl-color);
 }
 
 .project-img {

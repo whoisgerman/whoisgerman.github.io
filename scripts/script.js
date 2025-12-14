@@ -12,7 +12,9 @@ function typeWriter() {
   }
 }
 
+if(targetElement !== null) {
 window.addEventListener('load', typeWriter);
+}
 
 //Light and Dark modes 
 const toggleBtn = document.getElementById('theme-toggle');
