@@ -431,7 +431,7 @@ footer {
   }
   .navbar a {
     width: 100px;
-    padding-left: 2.5em;
+    margin-left: 1.5em;
   }
 }
 
